@@ -16,7 +16,7 @@ export { loadFromBlob } from "./blob";
 export { loadFromJSON, saveAsJSON } from "./json";
 
 export const exportCanvas = async (
-  type: ExportType,
+  type: Omit<ExportType, "backend">,
   elements: readonly NonDeletedExcalidrawElement[],
   appState: AppState,
   files: BinaryFiles,
